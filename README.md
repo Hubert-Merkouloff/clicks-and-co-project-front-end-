@@ -1,6 +1,6 @@
 # Ecommerce project with front end in React
 
-- HOOKS
+- Hooks
 - Axios
 - Bulma cards
 - api geo gouv
