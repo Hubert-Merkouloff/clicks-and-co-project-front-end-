@@ -1,0 +1,41 @@
+@import "../../styles/_vars";
+
+.flashMessage {
+  &__error {
+    text-align: center;
+    padding: $gutter;
+    animation: 5s ease-in flashMessageError;
+  }
+
+  &__success {
+    text-align: center;
+    padding: $gutter;
+    animation: 5s ease-in flashMessageSuccess;
+  }
+}
+
+@keyframes flashMessageError {
+  from {
+    background-color: rgb(233, 10, 10);
+    color: $light-color;
+    opacity: 1;
+  }
+  to {
+    background: transparent;
+    color: #fff;
+    opacity: 0;
+  }
+}
+
+@keyframes flashMessageSuccess {
+  from {
+    background-color: green;
+    color: $light-color;
+    opacity: 1;
+  }
+  to {
+    background: transparent;
+    color: #fff;
+    opacity: 0;
+  }
+}

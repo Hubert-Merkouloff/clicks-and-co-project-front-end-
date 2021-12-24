@@ -1,0 +1,49 @@
+@import "../../../styles/vars";
+@import "../../../styles/mixims";
+
+.loginbutton {
+  &__button {
+    @include button;
+    width: 100%;
+
+    &--login {
+      @include themeButton;
+
+      &:hover {
+        opacity: 0.8;
+        transition: $transition;
+      }
+    }
+    &--register {
+      @include themeButton($mainColor: $light-color, $altColor: $color-button);
+      margin-top: $gutter;
+
+      &:hover {
+        @include themeHover;
+      }
+    }
+    &--card {
+      @include themeButton;
+      padding: 0;
+      text-align: center;
+      border-radius: 1.5rem;
+      width: 2rem;
+      height: 2rem;
+      font-weight: 700;
+
+      &:hover {
+        @include themeHover($mainColor: $light-color, $altColor: $color-button);
+      }
+    }
+    &--logout {
+      @include themeButton($mainColor: red, $altColor: $light-color);
+      width: 8rem;
+      height: 3rem;
+      margin-left: 3rem;
+
+      &:hover {
+        @include themeHover($mainColor: $light-color, $altColor: red);
+      }
+    }
+  }
+}

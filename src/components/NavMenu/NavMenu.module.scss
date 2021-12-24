@@ -1,0 +1,157 @@
+@import "../../styles/vars";
+@import "../../styles/mixims";
+
+.navMenu {
+  //margin-top: $gutter * 2.5;
+
+  &__alignment {
+    display: flex;
+    align-items: center;
+  }
+
+  &__cart {
+    padding: 0 $gutter * 1.375;
+  }
+
+  &__pro {
+    display: none;
+    color: #3f3a2e;
+    font-weight: 700;
+  }
+
+  &__card {
+    width: 78px;
+    height: 38px;
+    background-color: $light-color;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6px;
+  }
+
+  &__link {
+    color: $color-main;
+    display: inline-block;
+    // padding: $gutter 0;
+  }
+
+  &__burger {
+    width: 25px;
+    height: 20px;
+    display: block;
+    position: relative;
+  }
+  &__span {
+    width: 100%;
+    position: relative;
+    margin-bottom: 4px;
+    border-radius: 10px;
+    height: 4px;
+    background: $color-main;
+    display: block;
+    left: calc(50% - 8px);
+  }
+
+  &__window {
+    position: absolute;
+    right: 0;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: $color-hero;
+    transform: translateX(100%);
+  }
+
+  &__item {
+    padding: $gutter 0;
+    color: $color-main;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: $color-hero;
+  }
+
+  &__iconProfil {
+    width: 30px;
+    height: 30px;
+    clip-path: ellipse(50% 50%);
+  }
+}
+
+//animation
+.slideIn {
+  animation: slideIn 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+.slideOut {
+  //animation: 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) forwards slideOut;
+  animation: slideOut 0.3s linear forwards;
+}
+
+@media screen and (min-width: 1200px) {
+  .navMenu {
+    &__pro {
+      display: flex;
+    }
+
+    &__window {
+      width: 250px;
+      margin-right: $gutter;
+      border-radius: 20px;
+      text-align: left;
+      padding: 0 $gutter;
+      animation: none;
+      transform: none;
+      display: none;
+    }
+
+    &__windowItem {
+      display: none;
+    }
+
+    &__logOut {
+      text-align: center;
+      font-weight: 400;
+    }
+  }
+  .isActive {
+    display: block;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+    display: none;
+  }
+  1% {
+    display: block;
+    opacity: 1;
+  }
+  100% {
+    display: block;
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}

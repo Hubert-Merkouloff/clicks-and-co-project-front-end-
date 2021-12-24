@@ -1,0 +1,33 @@
+@import "../../styles/mixims";
+@import "../../styles/vars";
+
+.profil {
+  width: 600px;
+  margin: 0 auto;
+
+  &__avatar {
+    position: absolute;
+    left: 150px;
+    top: 150px;
+    clip-path: ellipse(50% 50%);
+    width: 200px;
+    height: 200px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: $gutter * 2;
+  }
+
+  &__button {
+    @include button;
+    @include themeButton;
+
+    margin-top: $gutter * 2;
+
+    &:hover {
+      @include themeHover($mainColor: $light-color, $altColor: $color-button);
+    }
+  }
+}

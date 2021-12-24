@@ -1,0 +1,11 @@
+@import "../../styles/vars";
+
+.fields {
+  &__input {
+    //margin-bottom: $gutter;
+    //width: 600px;
+  }
+  .is-radius {
+    border-radius: 50px;
+  }
+}

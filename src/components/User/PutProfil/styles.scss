@@ -1,0 +1,21 @@
+@import "../../../styles/vars";
+
+.putProfil {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba($color-main, 0.5);
+
+  &__title {
+    font-weight: 700;
+    display: block;
+  }
+
+  &__block {
+    padding-bottom: $gutter;
+  }
+
+  &__button {
+    color: $color-button;
+  }
+}

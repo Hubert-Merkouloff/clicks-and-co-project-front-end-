@@ -1,0 +1,26 @@
+@import "../../../styles/vars";
+@import "../../../styles/mixims";
+.login {
+  //margin: 0 1rem;
+
+  &__blockButton {
+    margin-top: $gutter * 3;
+  }
+
+  &__forgotPassworld {
+    display: block;
+    text-align: right;
+    margin-bottom: $gutter/2;
+    font-size: 14px;
+  }
+
+  &__button {
+    @include button;
+    @include themeButton;
+    width: 100%;
+
+    &:hover {
+      @include themeHover($mainColor: $light-color, $altColor: $color-button);
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "reset"; //sera obsoléte a l'avenir, react-app ne prend pas en compte @use
+@import "vars";
+@import "mixims";
+
+html {
+  //Hide scoll with bulma
+  overflow-y: auto !important;
+  background-color: $color-background;
+}
+body {
+  color: $color-main;
+  font-family: $font !important;
+  background-color: $color-background;
+  min-height: 100vh;
+}
+
+.table {
+  background-color: inherit !important;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.table th {
+  color: aqua;
+}
+
+.table thead th {
+  color: aqua;
+}
+
+//Classe reutissable
+.hideItem {
+  position: absolute;
+  opacity: 0;
+}
+
+.displayItem {
+  display: none !important;
+}

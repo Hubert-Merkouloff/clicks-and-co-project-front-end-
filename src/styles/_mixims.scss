@@ -1,0 +1,21 @@
+@mixin button() {
+  padding: $gutter;
+  border-radius: 10px;
+  margin-bottom: $gutter;
+  font-size: 1rem;
+  text-align: center;
+}
+
+@mixin themeButton($mainColor: $color-button, $altColor: $light-color) {
+  color: $altColor;
+  background-color: $mainColor;
+  border: 1px solid $mainColor;
+  font-weight: 700;
+}
+
+@mixin themeHover($mainColor: $color-button, $altColor: $light-color) {
+  background-color: $mainColor;
+  border: 1px solid $altColor;
+  color: $altColor;
+  transition: $transition;
+}

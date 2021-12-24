@@ -1,0 +1,138 @@
+@import "../../styles/vars";
+
+.searchlist {
+  margin: auto;
+}
+
+.title {
+  font-size: 20px;
+  background-color: $color-hero;
+  padding: $gutter;
+  margin-top: $gutter;
+}
+
+.searchresult {
+  display: flex;
+
+  &__filter {
+    width: 50px;
+    height: 100vh;
+    padding: 5px;
+    transition: all 0.3s linear;
+
+    .entonnoir {
+      width: 30px;
+      display: block;
+      position: absolute;
+      padding-top: 20px;
+    }
+
+    .title2 {
+      display: none;
+    }
+
+    .title3 {
+      display: none;
+    }
+
+    &__container {
+      display: none;
+    }
+
+    &:hover {
+      width: 200px;
+      opacity: 1;
+
+      .entonnoir {
+        display: none;
+      }
+
+      .title2 {
+        display: block;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 20px;
+        text-orientation: sideways;
+        writing-mode: horizontal-tb;
+      }
+
+      .title3 {
+        display: block;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: left;
+        padding-top: 20px;
+        padding-bottom: 30px;
+      }
+
+      /* Customize the label (the container) */
+      .searchresult__filter__container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* Hide the browser's default checkbox */
+      .searchresult__filter__container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      /* Create a custom checkbox */
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+      }
+
+      /* On mouse-over, add a grey background color */
+      .searchresult__filter__container:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+
+      /* When the checkbox is checked, add a blue background */
+      .searchresult__filter__container input:checked ~ .checkmark {
+        background-color: #bab4ce;
+      }
+
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      /* Show the checkmark when checked */
+      .searchresult__filter__container input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      /* Style the checkmark/indicator */
+      .searchresult__filter__container .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid rgb(0, 0, 0);
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

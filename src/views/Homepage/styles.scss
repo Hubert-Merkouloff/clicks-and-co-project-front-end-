@@ -1,0 +1,52 @@
+@import "../../styles/vars";
+
+.hometitle {
+  &--paddingtop {
+    font-size: 30px;
+    padding-top: 50px;
+    padding-left: 20px;
+  }
+}
+
+.homepage {
+  &__containerHero {
+    background-color: $color-backgroundHeader;
+    padding-bottom: $gutter * 2;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+
+    &--shop {
+      padding-top: 20px;
+      padding-left: 20px;
+    }
+  }
+
+  &__category {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .homepage {
+    &__title {
+      &--shop {
+        padding-left: 200px;
+      }
+
+      &--category {
+        padding-left: 200px;
+      }
+    }
+    &__category {
+      display: block;
+      transform: translateY(-80px);
+    }
+
+    &__shop {
+      transform: translateY(-130px);
+    }
+  }
+}

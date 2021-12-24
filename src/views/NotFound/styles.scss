@@ -1,0 +1,58 @@
+@import "../../styles/vars";
+
+.notfound {
+
+  // height: 100vh;
+  width: 100%;
+  background-color: $color-background;
+
+  &__link {
+
+    background-color: $color-backgroundHeader;
+    height: 8rem;
+  }
+
+  &__picture {
+
+    //background-size: cover;
+    background-repeat: no-repeat;
+    width: 750px;
+    height: 500px;
+    margin: auto;
+    margin-top: 2rem;
+    background-image: url('./404.jpg');
+  }
+
+  &__description {
+    width: 450px;
+    margin: auto;
+    padding-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__bouton {
+    width: 200px;
+    background-color:$color-button;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    margin-top: 1rem ;
+    padding: 1rem;
+    border-radius: 2rem;
+    display: block;
+    color: white !important;
+
+    &:hover{
+      background-color: $color-button-light;
+      
+    }
+
+
+  }
+
+
+
+  
+}

@@ -1,0 +1,82 @@
+@import "../../styles/vars";
+
+.header {
+  background-color: $color-backgroundHeader;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 5;
+
+  //background: $color-backgroundUser;
+  //
+  &__flex {
+    /*  position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 100; */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $gutter;
+  }
+
+  &__logo {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__searchBar {
+    display: none;
+  }
+
+  &__searchButton {
+    display: none;
+  }
+
+  &__searchBarMobile {
+    margin: 0 $gutter * 2;
+    padding-bottom: $gutter;
+  }
+  &__shop {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+  }
+  /*   &__hero {
+    padding-bottom: $gutter;
+  } */
+}
+
+@media screen and (min-width: 1100px) {
+  .header {
+    max-height: 92px;
+
+    &__searchBarMobile {
+      display: none;
+    }
+
+    &__logo {
+      margin: 0;
+    }
+
+    &__searchButton {
+      padding-left: 24px;
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+
+      &__element {
+        display: block;
+      }
+    }
+
+    &__hero {
+      padding-bottom: 150px;
+    }
+
+    &__searchBar {
+      display: block;
+    }
+  }
+}

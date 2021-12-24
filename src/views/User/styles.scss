@@ -1,0 +1,46 @@
+@import "../../styles/vars";
+
+.user {
+  &__container {
+    max-width: 600px;
+    background-color: $color-backgroundUser;
+    padding: 0 $gutter;
+    border: 1px solid $color-backgroundUser;
+    //margin: 0 auto;
+    //padding: 0 $gutter/2;
+  }
+
+  &__logo {
+    display: block;
+    text-align: center;
+    padding: $gutter 0;
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    margin: $gutter 0;
+  }
+
+  &__forgotPassworld {
+    font-size: 12px;
+    display: block;
+    text-align: right;
+    padding-bottom: $gutter / 2;
+  }
+  &__registerContainer {
+    margin-top: 0.1rem;
+    background-color: rgba($color-backgroundUser, 0.8);
+    border: 1px solid rgba($color-backgroundUser, 0.8);
+  }
+  &__input--hide {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .user {
+    &__container {
+      margin: 0 auto;
+    }
+  }
+}

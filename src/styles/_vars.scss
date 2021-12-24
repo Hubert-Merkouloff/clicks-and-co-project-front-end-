@@ -1,0 +1,20 @@
+$font: "Roboto Slab", serif;
+
+$gutter: 1rem;
+
+//color v2
+$color-main: #444444;
+
+$color-background: #fdfafa;
+$color-backgroundHeader: #eaddc5;
+$color-backgroundAlt: #b0afaf;
+$color-backgroundUser: #f7f0e9;
+$color-button: #de4e4e;
+$light-color: #ffff;
+$color-hero: #f2f1f1;
+$color-hero-light: lighten($color-hero, 50%);
+$color-button-light: lighten($color-button, 10%);
+
+//$color-hero: #b4d1c3;
+
+$transition: all 0.5s ease-in-out;

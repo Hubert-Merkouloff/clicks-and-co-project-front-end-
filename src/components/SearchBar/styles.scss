@@ -1,0 +1,33 @@
+@import "../../styles/mixims";
+@import "../../styles/vars";
+
+.searchBar {
+  overflow-x: hidden;
+  &__form {
+    display: flex;
+    margin: auto;
+    position: relative;
+  }
+
+  &__field {
+    width: 500px;
+  }
+
+  &__button {
+    @include themeButton;
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 30px;
+    width: 30px;
+
+    &:hover {
+      @include themeHover($mainColor: $light-color, $altColor: $color-button);
+    }
+  }
+
+  &__list {
+    margin: 0 $gutter;
+  }
+}
